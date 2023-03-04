@@ -7,19 +7,19 @@ export class Todo {
        this.status = status;
     }
 
-    public get getTitle() {
+    public getTitle() {
         return this.title;
     }
 
-    public set setTitle(value : string) {
+    public setTitle(value : string) {
         this.title = value;
     }
 
-    public get getStatus() {
+    public getStatus() {
         return this.status;
     }
 
-    public set setStatus(state : boolean) {
+    public setStatus(state : boolean) {
         this.status = state;
     }
 }

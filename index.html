@@ -15,15 +15,22 @@
     <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="192x192" href="./favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./faviconfavicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/style.css">
+    <configuration>
+        <system.webServer>
+            <staticContent>
+                <remove fileExtension=".json" />
+                <mimeMap fileExtension=".json" mimeType="application/json" />
+            </staticContent>
+        </system.webServer>
+    </configuration>
 </head>
 
 <body>
@@ -33,12 +40,12 @@
             <input class="new-todo" id="new-todo" placeholder="What needs to be done?" autofocus>
         </header>
         <section class="main">
-            <input id="toggle-all" class="toggle-all" type="checkbox">
+            <input class="toggle-all" type="checkbox">
             <label for="toggle-all">Mark all as complete</label>
             <ul class="todo-list" id="todo-list"></ul>
         </section>
-        <footer class="footer">
-            <span class="todo-count"><strong>0</strong> item left</span>
+        <footer class="footer" id="footer">
+            <span class="todo-count" id="todo-count"></span>
             <ul class="filters">
                 <li>
                     <a class="selected" href="#/">All</a>
@@ -50,10 +57,10 @@
                     <a href="#/completed">Completed</a>
                 </li>
             </ul>
-            <button class="clear-completed">Clear completed</button>
+            <button class="clear-completed" id="clear-completed">Clear completed</button>
         </footer>
     </section>
-    <script type="module" src="./public/main.js"></script>
+    <script type="module" src="public/main.js"></script>
 </body>
 
 </html>

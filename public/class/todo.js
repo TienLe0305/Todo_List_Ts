@@ -3,17 +3,16 @@ export class Todo {
         this.title = title;
         this.status = status;
     }
-    get getTitle() {
+    getTitle() {
         return this.title;
     }
-    set setTitle(value) {
+    setTitle(value) {
         this.title = value;
     }
-    get getStatus() {
+    getStatus() {
         return this.status;
     }
-    set setStatus(state) {
+    setStatus(state) {
         this.status = state;
     }
 }
-//# sourceMappingURL=todo.js.map

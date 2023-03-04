@@ -346,7 +346,7 @@ html .clear-completed:active {
 }
 
 h1 {
-  color: red !important;
+  color: #00ffcc !important;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
@@ -373,4 +373,8 @@ h1 {
 ul li input[type="checkbox"]:checked ~ label {
   color: #cdcdcd;
   text-decoration: line-through;
+}
+
+.hidden {
+  display: none;
 }
