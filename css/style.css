@@ -346,7 +346,27 @@ html .clear-completed:active {
 }
 
 h1 {
-  color: #00ffcc !important;
+  color: #66cc00 !important;
+}
+
+a {
+  color: #009900 !important;
+}
+
+button {
+  color: #009900 !important;
+}
+
+span {
+  color: #009900 !important;
+}
+
+input {
+  color: #0e723b !important;
+}
+
+label {
+  color: #0e723b !important;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
